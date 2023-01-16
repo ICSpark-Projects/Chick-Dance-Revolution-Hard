@@ -1,8 +1,23 @@
 # chick-dance-revolution
 
 This project builds on skills in handling events and making javascript functions. Create a game where you are a dancing chick!
+This chick can move up, down, left, and right, and must do so in time to the arrows on the music board, which will be moving up
+at different times.
 
-## Preliminary: Setting Up
+## Difficulty
+Intermediate/Advanced
+
+## Prerequisites
+HTML structures and attributes
+Changing elements in HTML using DOM
+CSS Flexbox
+CSS keyframe animations
+JS Functions
+JS Arrays
+JS Events
+
+
+## Setting Up
 
 - Download the img files 
 - Create the files: index.html, styles.css, and app.js
@@ -436,6 +451,11 @@ Within each of the event listener functions, set the animation state for the app
 Now if we play the game again, the moving arrows should reset correctly.
 
 Congrats! You have successfully implemented Dance Chick Revolution!
+
+## Stretch Goals
+Add a button to reset the game after it is complete.
+Create a menu to adjust the speed of the arrows to the game.
+Add sound effects for each of the moving arrows when they correctly hit the top arrows.
 
 
 
