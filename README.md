@@ -9,13 +9,13 @@ at different times.
 Intermediate/Advanced
 
 ## Prerequisites
-HTML structures and attributes
-Changing elements in HTML using DOM
-CSS Flexbox
-CSS keyframe animations
-JS Functions
-JS Arrays
-JS Events
+- HTML structures and attributes
+- Changing elements in HTML using DOM
+- CSS Flexbox
+- CSS keyframe animations
+- JS Functions
+- JS Arrays
+- JS Events
 
 
 ## Setting Up
