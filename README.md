@@ -324,5 +324,56 @@ Now we are finally into the JavaScript section. Head to your script.js file and 
 - Create variable for score text
 - Create empty array variable called "moves" for holding game moves
 
+2. Detecting player movement
+An essential part of Chick Dance Revolution is the chicken moving up, down, left, and right. For this to occur,
+we need to be able to detect what keys the player is pressing. In particular, the controls are the arrow keys.
+
+2.1. So we need to add an event listener. Create an event listener on document that detects when a key is pushed.
+Remember, an event listener takes in two parameters, the type of event and a function. Pass in the parameter "event"
+into the event listener function.
+
+Then, within the event listener function, write the following code.
+
+```
+var key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+```
+
+The variable key will tell us exactly what key was pressed, and for the arrow keys, I've commented exactly
+what these values can be.
+
+Knowing what key was pressed will help us determine what actions to take. The chick needs to be able to move in 4 directions,
+and the arrows need to change accordingly as well.
+
+Set up if/else if statements to check whether the variable key is equal to "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown".
+
+Within those statements, make the following changes:
+- Change the source of the chick to the right direction
+  - Ex: chick.src = 'img/chick-left.png';
+- Change the source of the dance board arrow and music board arrow to the orange arrow image.
+
+Now try moving the chick using the arrow keys. You should notice arrows changing from blue to orange and the chick changing
+direction. But do you see the issue? Once you stop pressing the keys, we should see the orange arrows go back to blue and the chick
+reset to its default position, but this is not the case. As such, we need to add another event listener.
+
+2.2. Create an event listener to detect the 'keyup' event. Format this event listener similar to the 'keydown' event listener.
+
+Once again, create the key variable and the if/else if statements corresponding to whether key equals "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown".
+
+Outside your if/else statements, reset the source of the chick to the chick base image.
+
+Within your if/else if statements, reset the source of each appropriate arrow to the blue arrow image.
+
+Now try moving the chick again. You should see the chick's movement and the arrows' colors reset appropriately.
+
+What comes next? Now that we can move our character, it is time to make the game functional.
+
+3. Function to play game
+
+3.1 Create a function called "playGame()" to run the Chick Dance Revolution game.
+
+Then, go back to your index.html and look for the play button. In this button, add the attribute "onclick=playGame()".
+This is another way to add an event listener besides just doing it in JavaScript.
+
+Head back to script.js
 
 
