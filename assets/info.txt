@@ -1,1 +1,1 @@
-This file contains all the images needed for the project.
+This file contains all the assets needed for the project.
