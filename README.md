@@ -369,11 +369,73 @@ What comes next? Now that we can move our character, it is time to make the game
 
 3. Function to play game
 
-3.1 Create a function called "playGame()" to run the Chick Dance Revolution game.
+3.1. Create a function called "playGame()" to run the Chick Dance Revolution game.
 
 Then, go back to your index.html and look for the play button. In this button, add the attribute "onclick=playGame()".
-This is another way to add an event listener besides just doing it in JavaScript.
+This is another way to add an event listener besides just doing it in JavaScript. With this in place, if a user presses the
+button, the playGame() function will execute.
 
-Head back to script.js
+Head back to script.js. Within the playGame() function, we are going to focus on making arrows move in response to a premade
+array of moves. To do this, let's first assign values to the moves array that we created at the top of the file.
+
+3.2. Creating moves
+
+Make a for loop that runs however many iterations you want the game to be. For instance, the for loop could run 30 times for 30 moves.
+
+Within this for loop, add the following code:
+```
+moves.push(Math.floor(Math.random() * 4));
+```
+
+This will push a random value from 0 to 3 (inclusive) onto the moves array. We are considering 0 = up, 1 = down, 2 = right, and 3 = left.
+So for instance, if the value 0 was pushed onto the moves array, that indicates we added an up arrow move to our array.
+
+Now that we have the moves array all set, now we can implement the functionality of the arrows on the music board moving up according to
+what the current move is. To do so, we must use something called setInterval.
+
+3.3. Creating set interval function
+
+setInterval is a function that enables us to call a function repeatedly after a set period of time, which will be useful for our game.
+
+Add the following code into your playGame() function:
+```
+  setInterval(function movingNotes(intervalID) {
+    clearInterval(intervalID);
+    // check moves
+    // increment i
+    // check whether to continue or end game
+  }, 1500);
+```
+This code will form the basis for what we need.
+
+Right after the clearInterval(intervalID) statement, create if/else if statements to check if moves[i] == 0, moves[i] == 1, moves[i] == 2, or
+moves[i] == 3. 
+
+Increment i after all these if/else if statements because we want to keep iterating through the moves array after making a move.
+
+Then, at the end we must check whether to continue or end the game based on the value of i.
+If i < moves.length, call the playGame() function. Else if i == moves.length, create a new audio using the "chicken-sound.mp3" in the assets
+folder and play the audio. The audio signifies the end of the game.
+
+3.4. Implementing arrow up animation functionality
+
+Notice how we haven't put anything within the if/else if statements to check each of the moves made. This is where we need to set the
+arrow elements to have an animation. Add the following code within the if statement that checks if moves[i] == 0:
+
+```
+upMoveArrow.style.animation = 'moveUp 1s linear 1';
+```
+
+Copy this code into the other else if statements and adjust it appropriately.
+
+Now try playing the game. Notice how the arrow animation continues even after the move is finished.
+
+To fix this, we must add more event listeners. For each of the moving arrow variables, add an event listener for "animationend".
+Within each of the event listener functions, set the animation state for the appropriate arrow back to "none".
+
+Now if we play the game again, the moving arrows should reset correctly.
+
+Congrats! You have successfully implemented Dance Chick Revolution!
+
 
 
