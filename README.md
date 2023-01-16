@@ -170,101 +170,149 @@ Copy the below code and follow the directions in the comments.
 
 ```
 .arrow {
-  height: 240px;
-  width: 240px;
+  /* Set height and width to 240px */
 }
 
 #arrow-up {
-  transform: rotate(180deg);
+ /* Set transform to rotate(180deg) */
 }
 
 #arrow-upperright {
-  transform: rotate(225deg);
-  opacity: 50%;
+  /* Set transform to rotate(225deg) */
+  /* Set opacity to 50% */
 }
 
 #arrow-right {
-  transform: rotate(-90deg);
+  /* Set transform to rotate(-90deg) */
 }
 
 #arrow-lowerright {
-  transform: rotate(-45deg);
-  opacity: 50%;
+  /* Set transform to rotate(-45deg) */
+  /* Set opacity to 50% */
 }
 
 #arrow-lower {
-  transform: rotate(90deg);
+  /* Set transform to rotate(90deg) */
 }
 
 #arrow-upperleft {
-  transform: rotate(135deg);
-  opacity: 50%;
+  /* Set transform to rotate(135deg) */
+  /* Set opacity to 50% */
 }
 
 #arrow-left {
-  transform: rotate(90deg);
-  animation-name: moveLeft;
-  animation-duration: 4s;
+  /* Set transform to rotate(90deg) */
 }
 
 #arrow-lowerleft {
-  transform: rotate(45deg);
-  opacity: 50%;
+  /* Set transform to rotate(45deg) */
+  /* Set opacity to 50% */
 }
 
 .toparrow, .movearrow {
-  height: 150px;
-  width: 150px;
+  /* Set height and width to 150px */
 }
 
 #toparrow-up, #movearrow-up {
-  transform: rotate(180deg);
-}
-
-#toparrow-right, #movearrow-right {
-  transform: rotate(-90deg);
-}
-
-#toparrow-down, #movearrow-down {
-  transform: rotate(0deg);
-}
-
-#toparrow-left, #movearrow-left {
+  /* Set transform to rotate(90deg) */
   transform: rotate(90deg);
 }
 
+#toparrow-right, #movearrow-right {
+  /* Set transform to rotate(-90deg) */
+}
+
+#toparrow-down, #movearrow-down {
+  /* Set transform to rotate(0deg) */
+}
+
+#toparrow-left, #movearrow-left {
+  /* Set transform to rotate(90deg) */
+}
+
 #topNotes {
-  display: flex;
-  align-self: flex-start;
+  /* Set display to flex */
+  /* Set self align to flex-start */
 }
 
 #moveNotes {
-  opacity: 80%;
+  /* Set opacity to 80% */
 }
 
 #movearrow-up {
-  position: absolute;
-  bottom: 500px;
-  right: 800px;
+  /* Set position to absolute */
+  /* Set bottom to 500px */
+  /* Set right to 800px */
 }
 
 #movearrow-right {
-  position: absolute;
-  bottom: 500px;
-  right: 650px;
+  /* Set position to absolute */
+  /* Set bottom to 500px */
+  /* Set right to 650px */
 }
 
 #movearrow-down {
-  position: absolute;
-  bottom: 500px;
-  right: 500px;
+  /* Set position to absolute */
+  /* Set bottom to 500px */
+  /* Set right to 500px */
 }
 
 #movearrow-left {
-  position: absolute;
-  bottom: 500px;
-  right: 350px;
+  /* Set position to absolute */
+  /* Set bottom to 500px */
+  /* Set right to 350px */
 }
 ```
+
+This code sets up some important formatting for the arrows. For example, we transform our arrows to point them in the correct direction.
+The movearrows are going to be animated and will need keyframes. This brings us to the next step.
+
+Copy the below code and follow the directions in the comments. If you are stuck, follow the formatting [here](https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php).
+
+```
+@keyframes moveUp {
+  /* Have the keyframe go from bottom: 500px to bottom: 1100px */
+}
+
+@keyframes moveLeft {
+  /* Have the keyframe go from bottom: 500px to bottom: 1100px */
+}
+
+@keyframes moveDown {
+  /* Have the keyframe go from bottom: 500px to bottom: 1100px */
+}
+
+@keyframes moveRight {
+  /* Have the keyframe go from bottom: 500px to bottom: 1100px */
+}
+```
+
+3. End elements styling
+
+Finally, we must add styling to our play button and score text so that they appear on the page correctly and neatly.
+Copy the below code and follow the directions in the comments.
+
+Style the play button
+```
+#play {
+  /* Set left and bottom margins to 300px */
+  /* Set the display to inline block */
+  /* Style the font size, background color, border radius, color, etc.
+}
+```
+
+Style the score text
+```
+#score {
+  /* Set left margin to 900px */
+  /* Set bottom margin to 300px */
+  /* Set the display to inline block */
+  /* Set height to 200px */
+  /* Set width to 300px */
+  /* Style the font size, background color, border radius, color, etc.
+}
+```
+
+## Part 3: JS
 
 
