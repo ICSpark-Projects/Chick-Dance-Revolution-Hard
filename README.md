@@ -454,9 +454,9 @@ Now if we play the game again, the moving arrows should reset correctly.
 Congrats! You have successfully implemented Dance Chick Revolution!
 
 ## Stretch Goals
-Add a button to reset the game after it is complete.
-Create a menu to adjust the speed of the arrows to the game.
-Add sound effects for each of the moving arrows when they correctly hit the top arrows.
+- Add a button to reset the game after it is complete.
+- Create a menu to adjust the speed of the moving arrows.
+- Add sound effects for each of the moving arrows when they correctly hit the top arrows.
 
 
 
