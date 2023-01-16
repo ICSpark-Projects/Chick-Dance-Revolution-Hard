@@ -20,10 +20,10 @@ JS Events
 
 ## Setting Up
 
-- Download the img files 
+- Download the directory zip file (click green "Code" button, then download as zip).
 - Create the files: index.html, styles.css, and app.js
-- Upload the img folder into the directory you are working
-- Set up and link the files
+- Open the zip and upload the files into the directory you are working
+- Set up and link your index.html, styles.css, and app.js
 
 For the last step, follow these steps:
 1. In your index.html file, initialize the file using the shortcut ```!```, then press tab. You should get something like the following.
