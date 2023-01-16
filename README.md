@@ -1,5 +1,6 @@
 # chick-dance-revolution
 
+## Description
 This project builds on skills in handling events and making javascript functions. Create a game where you are a dancing chick!
 This chick can move up, down, left, and right, and must do so in time to the arrows on the music board, which will be moving up
 at different times.
