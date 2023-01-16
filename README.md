@@ -2,7 +2,7 @@
 
 This project builds on skills in handling events and making javascript functions. Create a game where you are a dancing chick!
 
-## Step 1: Setting Up
+## Preliminary: Setting Up
 
 - Download the img files 
 - Create the files: index.html, styles.css, and app.js
@@ -47,7 +47,7 @@ and the JS script within the body tags to ensure your CSS and JS are linked prop
 </html>
 ```
 
-## Step 2: HTML
+## Part 1: HTML
 
 1. Create the following HTML elements, following the nested structure.
 
@@ -118,9 +118,153 @@ div with id "moveNotes":
 
 The above code adds arrow elements to the music board. These are the arrows at the bottom of the board that will move upwards.
 
+## Part 2: CSS
 
+Next up, head to your style.css file. We are going to add style to our elements.
 
+1. Main elements styling
 
+Copy the below code and follow the directions in the comments.
 
+```
+body {
+  /* Set the background image to farm.jpg */
+}
+
+#container {
+  /* Set the position to fixed. This will ensure no elements move out of place. */
+}
+
+#chick {
+  /* Set height and width to 250px */
+}
+
+h1 {
+  /* Style title font how you want */
+}
+
+#game {
+  /* Set the display to flex. This will help organize the main divs */
+}
+
+#danceBoard {
+  /* Set border to 2px solid black */
+  /* Set height and width to 750px */
+  /* Set background color to reasonable color like gray */
+  /* Set the left margin to 300px. This helps position the dance board correctly. */
+}
+
+#musicBoard {
+  /* Set border to 2px solid black */
+  /* Set height to 750px and width to 700px */
+  /* Set background color to reasonable color like orange */
+  /* Set right margin to 300px */
+  /* Set display to flex */
+  /* Set justify content to center */
+}
+```
+
+2. Arrow elements styling
+
+Copy the below code and follow the directions in the comments.
+
+```
+.arrow {
+  height: 240px;
+  width: 240px;
+}
+
+#arrow-up {
+  transform: rotate(180deg);
+}
+
+#arrow-upperright {
+  transform: rotate(225deg);
+  opacity: 50%;
+}
+
+#arrow-right {
+  transform: rotate(-90deg);
+}
+
+#arrow-lowerright {
+  transform: rotate(-45deg);
+  opacity: 50%;
+}
+
+#arrow-lower {
+  transform: rotate(90deg);
+}
+
+#arrow-upperleft {
+  transform: rotate(135deg);
+  opacity: 50%;
+}
+
+#arrow-left {
+  transform: rotate(90deg);
+  animation-name: moveLeft;
+  animation-duration: 4s;
+}
+
+#arrow-lowerleft {
+  transform: rotate(45deg);
+  opacity: 50%;
+}
+
+.toparrow, .movearrow {
+  height: 150px;
+  width: 150px;
+}
+
+#toparrow-up, #movearrow-up {
+  transform: rotate(180deg);
+}
+
+#toparrow-right, #movearrow-right {
+  transform: rotate(-90deg);
+}
+
+#toparrow-down, #movearrow-down {
+  transform: rotate(0deg);
+}
+
+#toparrow-left, #movearrow-left {
+  transform: rotate(90deg);
+}
+
+#topNotes {
+  display: flex;
+  align-self: flex-start;
+}
+
+#moveNotes {
+  opacity: 80%;
+}
+
+#movearrow-up {
+  position: absolute;
+  bottom: 500px;
+  right: 800px;
+}
+
+#movearrow-right {
+  position: absolute;
+  bottom: 500px;
+  right: 650px;
+}
+
+#movearrow-down {
+  position: absolute;
+  bottom: 500px;
+  right: 500px;
+}
+
+#movearrow-left {
+  position: absolute;
+  bottom: 500px;
+  right: 350px;
+}
+```
 
 
