@@ -315,4 +315,14 @@ Style the score text
 
 ## Part 3: JS
 
+Now we are finally into the JavaScript section. Head to your script.js file and follow along.
+
+1. Set up variables
+- Create variable for chick 
+- Create variables for elements with ids arrow-up, arrow-left, arrow-right, arrow-down
+- Create variables for elements with ids movearrow-up, movearrow-left, movearrow-right, movearrow-down
+- Create variable for score text
+- Create empty array variable called "moves" for holding game moves
+
+
 
