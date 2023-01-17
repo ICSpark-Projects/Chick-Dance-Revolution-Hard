@@ -20,10 +20,10 @@ Intermediate/Advanced
 
 ## Setting Up
 
-- Download the directory zip file (click green "Code" button, then download as zip).
-- Create the files: index.html, styles.css, and app.js
-- Open the zip and upload the files into the directory you are working
-- Set up and link your index.html, styles.css, and app.js
+- Download the directory zip file (click green "Code" button, then click "download ZIP").
+- Create the files: index.html, styles.css, and app.js.
+- Open the zip and upload the assets folder into the directory you are working.
+- Set up and link your index.html, styles.css, and app.js.
 
 For the last step, follow these steps:
 1. In your index.html file, initialize the file using the shortcut ```!```, then press tab. You should get something like the following.
@@ -44,7 +44,7 @@ For the last step, follow these steps:
 ```
 
 2. Link your CSS and JS files as follows. You should have the link to the CSS stylesheet within the head tags
-and the JS script within the body tags to ensure your CSS and JS are linked properly.
+and the JS script within the body tags to ensure your CSS and JS are linked properly. Also make sure to title your file!
 
 ``` html
 <!DOCTYPE html>
@@ -53,27 +53,27 @@ and the JS script within the body tags to ensure your CSS and JS are linked prop
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Chick Dance Revolution</title>
 </head>
 <body>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
 ```
 
 ## Part 1: HTML
 
-1. Create the following HTML elements, following the nested structure.
+1. Create the following HTML elements within the body tags, following the nested structure.
 
 - div with the id "container". This div will hold all our elements.
-  - h1 with the inner HTML "Dance Chick Revolution".
+  - h1 with the inner HTML "Chick Dance Revolution".
   - div with the id "game". This div will hold all game elements.
-    - div with the id "gameBoard". This div will hold chick and the dancefloor.
-    - div with the id "musicBoard". This div will hold the music note arrows.
-      - div with the id "topNotes". This div will hold the arrows at the top of the music board.
-      - div with the id "moveNotes". This div will hold the arrows at the bottom of the music board, which will move up to the top.
+    - div with the id "dance-board". This div will hold chick and the dancefloor.
+    - div with the id "music-board". This div will hold the music note arrows.
+      - div with the id "top-notes". This div will hold the arrows at the top of the music board.
+      - div with the id "move-notes". This div will hold the arrows at the bottom of the music board, which will move up to the top.
   - button with the id "play" and inner HTML "Play". This button will start the game.
   - div with the id "score". This div will hold the score text.
     - h2 with the id "score-text" and the inner HTML "Score: 0". This div represents the score text.
@@ -84,10 +84,10 @@ Your HTML should look like this:
   <div id='container'>
     <h1>Dance Chick Revolution</h1>
     <div id='game'>
-      <div id='danceBoard'></div>
-      <div id='musicBoard'>
-        <div id='topNotes'></div>
-        <div id='moveNotes'></div>
+      <div id='dance-board'></div>
+      <div id='music-board'>
+        <div id='top-notes'></div>
+        <div id='move-notes'></div>
       </div>
     </div>
     <button id='play'>Play</button>
@@ -99,40 +99,42 @@ Your HTML should look like this:
 
 2. Add the following within each of the respective divs:
 
-div with id "danceBoard":
+div with id "dance-board":
 ```
-   <img src="blue-arrow.png" alt="blue arrow" id='arrow-upperleft' class='arrow'>
-        <img src="blue-arrow.png" alt="blue arrow" id='arrow-up' class='arrow'>
-        <img src="blue-arrow.png" alt="blue arrow" id='arrow-upperright' class='arrow'>
-        <img src="blue-arrow.png" alt="blue arrow" id='arrow-left' class='arrow'>
-        <img src="img/chick-base.png" alt="chick" id='chick'>
-        <img src="blue-arrow.png" alt="blue arrow" id='arrow-right' class='arrow'>
-        <img src="blue-arrow.png" alt="blue arrow" id='arrow-lowerleft' class='arrow'>
-        <img src="blue-arrow.png" alt="blue arrow" id='arrow-down' class='arrow'>
-        <img src="blue-arrow.png" alt="blue arrow" id='arrow-lowerright' class='arrow'>
-```
-
-The above code adds arrow elements to the dance board where the chick will be dancing.
-
-div with id "topNotes":
-```
-<img src="blue-arrow.png" alt="blue arrow" id='toparrow-up' class='toparrow'>
-          <img src="blue-arrow.png" alt="blue arrow" id='toparrow-right' class='toparrow'>
-          <img src="blue-arrow.png" alt="blue arrow" id='toparrow-down' class='toparrow'>
-          <img src="blue-arrow.png" alt="blue arrow" id='toparrow-left' class='toparrow'>
+        <img src="assets/blue-arrow.png" alt="left blue arrow" id='dancearrow-upperleft' class='dancearrow'>
+        <img src="assets/blue-arrow.png" alt="up blue arrow" id='dancearrow-up' class='dancearrow'>
+        <img src="assets/blue-arrow.png" alt="upperright blue arrow" id='dancearrow-upperright' class='dancearrow'>
+        <img src="assets/blue-arrow.png" alt="left blue arrow" id='dancearrow-left' class='dancearrow'>
+        <img src="assets/chick-base.png" alt="chick" id='chick'>
+        <img src="assets/blue-arrow.png" alt="right blue arrow" id='dancearrow-right' class='dancearrow'>
+        <img src="assets/blue-arrow.png" alt="lowerleft blue arrow" id='dancearrow-lowerleft' class='dancearrow'>
+        <img src="assets/blue-arrow.png" alt="down blue arrow" id='dancearrow-down' class='dancearrow'>
+        <img src="assets/blue-arrow.png" alt="lowerright blue arrow" id='dancearrow-lowerright' class='dancearrow'>
 ```
 
-The above code adds arrow elements to the music board. These are the arrows at the top of the board that don't move.
+The above code adds the chick element and the arrow elements to the dance board.
 
-div with id "moveNotes":
+div with id "top-notes":
 ```
-          <img src="blue-arrow.png" alt="blue arrow" id='movearrow-up' class='movearrow'>
-          <img src="blue-arrow.png" alt="blue arrow" id='movearrow-right' class='movearrow'>
-          <img src="blue-arrow.png" alt="blue arrow" id='movearrow-down' class='movearrow'>
-          <img src="blue-arrow.png" alt="blue arrow" id='movearrow-left' class='movearrow'>
+          <img src="assets/blue-arrow.png" alt="up blue arrow" id='toparrow-up' class='toparrow'>
+          <img src="assets/blue-arrow.png" alt="right blue arrow" id='toparrow-right' class='toparrow'>
+          <img src="assets/blue-arrow.png" alt="down blue arrow" id='toparrow-down' class='toparrow'>
+          <img src="assets/blue-arrow.png" alt="left blue arrow" id='toparrow-left' class='toparrow'>
 ```
 
-The above code adds arrow elements to the music board. These are the arrows at the bottom of the board that will move upwards.
+The above code adds 4 arrow elements to the music board. These are the arrows at the top of the board that don't move.
+
+div with id "move-notes":
+```
+          <img src="assets/blue-arrow.png" alt="up blue arrow" id='movearrow-up' class='movearrow'>
+          <img src="assets/blue-arrow.png" alt="right blue arrow" id='movearrow-right' class='movearrow'>
+          <img src="assets/blue-arrow.png" alt="down blue arrow" id='movearrow-down' class='movearrow'>
+          <img src="assets/blue-arrow.png" alt="left blue arrow" id='movearrow-left' class='movearrow'>
+```
+
+The above code adds 4 arrow elements to the music board. These are the arrows at the bottom of the board that will move upwards.
+
+Don't forget to check your webview to make sure everything is correct!
 
 ## Part 2: CSS
 
@@ -144,7 +146,7 @@ Copy the below code and follow the directions in the comments.
 
 ```
 body {
-  /* Set the background image to farm.jpg */
+  /* Set the background image to the asset farm.jpg */
 }
 
 #container {
@@ -185,42 +187,42 @@ h1 {
 Copy the below code and follow the directions in the comments.
 
 ```
-.arrow {
+.dancearrow {
   /* Set height and width to 240px */
 }
 
-#arrow-up {
+#dancearrow-up {
  /* Set transform to rotate(180deg) */
 }
 
-#arrow-upperright {
+#dancearrow-upperright {
   /* Set transform to rotate(225deg) */
   /* Set opacity to 50% */
 }
 
-#arrow-right {
+#dancearrow-right {
   /* Set transform to rotate(-90deg) */
 }
 
-#arrow-lowerright {
+#dancearrow-lowerright {
   /* Set transform to rotate(-45deg) */
   /* Set opacity to 50% */
 }
 
-#arrow-lower {
+#dancearrow-lower {
   /* Set transform to rotate(90deg) */
 }
 
-#arrow-upperleft {
+#dancearrow-upperleft {
   /* Set transform to rotate(135deg) */
   /* Set opacity to 50% */
 }
 
-#arrow-left {
+#dancearrow-left {
   /* Set transform to rotate(90deg) */
 }
 
-#arrow-lowerleft {
+#dancearrow-lowerleft {
   /* Set transform to rotate(45deg) */
   /* Set opacity to 50% */
 }
@@ -246,12 +248,12 @@ Copy the below code and follow the directions in the comments.
   /* Set transform to rotate(90deg) */
 }
 
-#topNotes {
+#top-notes {
   /* Set display to flex */
   /* Set self align to flex-start */
 }
 
-#moveNotes {
+#move-notes {
   /* Set opacity to 80% */
 }
 
