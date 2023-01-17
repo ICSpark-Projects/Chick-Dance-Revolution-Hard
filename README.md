@@ -65,7 +65,7 @@ and the JS script within the body tags to ensure your CSS and JS are linked prop
 
 ## Part 1: HTML
 
-1. Create the following HTML elements within the body tags, following the nested structure.
+### 1. Create the following HTML elements within the body tags, following the nested structure.
 
 - div with the id "container". This div will hold all our elements.
   - h1 with the inner HTML "Chick Dance Revolution".
@@ -97,7 +97,7 @@ Your HTML should look like this:
   </div>
 ```
 
-2. Add the following within each of the respective divs:
+### 2. Add the following within each of the respective divs:
 
 div with id "dance-board":
 ```
@@ -142,7 +142,7 @@ Check and save your changes before moving on.
 
 Next up, head to your style.css file. We are going to add style to our elements.
 
-1. Main elements styling
+### 1. Main elements styling
 
 Copy the below code and follow the directions in the comments.
 
@@ -184,7 +184,7 @@ h1 {
 }
 ```
 
-2. Arrow elements styling
+### 2. Arrow elements styling
 
 Copy the below code and follow the directions in the comments.
 
@@ -307,7 +307,7 @@ Copy the below code and follow the directions in the comments. If you are stuck,
 }
 ```
 
-3. End elements styling
+### 3. End elements styling
 
 Finally, we must add styling to our play button and score text so that they appear on the page correctly and neatly.
 Copy the below code and follow the directions in the comments.
@@ -339,18 +339,23 @@ Check and save your changes before moving on.
 
 Now we are finally into the JavaScript section. Head to your script.js file and follow along.
 
-1. Set up variables, storing references for elements using DOM method ```document.getElementById(elementId)```.
-- Create variable for element chick 
-- Create variables for elements with ids arrow-up, arrow-left, arrow-right, arrow-down
-- Create variables for elements with ids movearrow-up, movearrow-left, movearrow-right, movearrow-down
-- Create variable for score text
+### 1. Set up variables, storing references for elements using DOM method ```document.getElementById(elementId)```.
+- Create variable for element chick called "chick"
+- Create variables for elements with ids dancearrow-up, dancearrow-left, dancearrow-right, dancearrow-down called "danceArrowUp", "danceArrowLeft",
+"danceArrowRight", and "danceArrowDown"
+- Create variables for elements with ids movearrow-up, movearrow-left, movearrow-right, movearrow-down called "moveArrowUp", "moveArrowLeft",
+"moveArrowRight", and "moveArrowDown"
+- Create variable for element score text called "scoreText"
 - Create empty array variable called "moves" for holding game moves
 
-2. Detecting player movement
+### 2. Detecting player movement
+
 An essential part of Chick Dance Revolution is the chicken moving up, down, left, and right. For this to occur,
 we need to be able to detect what keys the player is pressing. In particular, the controls are the arrow keys.
+So we need to add an event listener.
 
-2.1. So we need to add an event listener. Create an event listener on document that detects when a key is pushed.
+#### 2.1. Create an event listener on document that detects when a key is pushed.
+
 Remember, an event listener takes in two parameters, the type of event and a function. Pass in the parameter "event"
 into the event listener function.
 
@@ -377,8 +382,9 @@ Now try moving the chick using the arrow keys. You should notice arrows changing
 direction. But do you see the issue? Once you stop pressing the keys, we should see the orange arrows go back to blue and the chick
 reset to its default position, but this is not the case. As such, we need to add another event listener.
 
-2.2. Create an event listener to detect the 'keyup' event. Format this event listener similar to the 'keydown' event listener.
+#### 2.2. Create an event listener to detect the 'keyup' event. 
 
+Format this event listener similar to the 'keydown' event listener.
 Once again, create the key variable and the if/else if statements corresponding to whether key equals "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown".
 
 Outside your if/else statements, reset the source of the chick to the chick base image.
@@ -389,9 +395,9 @@ Now try moving the chick again. You should see the chick's movement and the arro
 
 What comes next? Now that we can move our character, it is time to make the game functional.
 
-3. Function to play game
+### 3. Function to play game
 
-3.1. Create a function called "playGame()" to run the Chick Dance Revolution game.
+#### 3.1. Create a function called "playGame()" to run the Chick Dance Revolution game.
 
 Then, go back to your index.html and look for the play button. In this button, add the attribute "onclick=playGame()".
 This is another way to add an event listener besides just doing it in JavaScript. With this in place, if a user presses the
@@ -400,7 +406,7 @@ button, the playGame() function will execute.
 Head back to script.js. Within the playGame() function, we are going to focus on making arrows move in response to a premade
 array of moves. To do this, let's first assign values to the moves array that we created at the top of the file.
 
-3.2. Creating moves
+#### 3.2. Creating moves
 
 Make a for loop that runs however many iterations you want the game to be. For instance, the for loop could run 30 times for 30 moves.
 
@@ -415,7 +421,7 @@ So for instance, if the value 0 was pushed onto the moves array, that indicates 
 Now that we have the moves array all set, now we can implement the functionality of the arrows on the music board moving up according to
 what the current move is. To do so, we must use something called setInterval.
 
-3.3. Creating set interval function
+#### 3.3. Creating set interval function
 
 setInterval is a function that enables us to call a function repeatedly after a set period of time, which will be useful for our game.
 
@@ -439,7 +445,7 @@ Then, at the end we must check whether to continue or end the game based on the 
 If i < moves.length, call the playGame() function. Else if i == moves.length, create a new audio using the "chicken-sound.mp3" in the assets
 folder and play the audio. The audio signifies the end of the game.
 
-3.4. Implementing arrow up animation functionality
+#### 3.4. Implementing arrow up animation functionality
 
 Notice how we haven't put anything within the if/else if statements to check each of the moves made. This is where we need to set the
 arrow elements to have an animation. Add the following code within the if statement that checks if moves[i] == 0:
