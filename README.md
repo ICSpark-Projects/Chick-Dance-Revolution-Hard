@@ -136,6 +136,8 @@ The above code adds 4 arrow elements to the music board. These are the arrows at
 
 Don't forget to check your webview to make sure everything is correct!
 
+Check and save your changes before moving on.
+
 ## Part 2: CSS
 
 Next up, head to your style.css file. We are going to add style to our elements.
@@ -165,14 +167,14 @@ h1 {
   /* Set the display to flex. This will help organize the main divs */
 }
 
-#danceBoard {
+#dance-board {
   /* Set border to 2px solid black */
   /* Set height and width to 750px */
   /* Set background color to reasonable color like gray */
   /* Set the left margin to 300px. This helps position the dance board correctly. */
 }
 
-#musicBoard {
+#music-board {
   /* Set border to 2px solid black */
   /* Set height to 750px and width to 700px */
   /* Set background color to reasonable color like orange */
@@ -233,7 +235,6 @@ Copy the below code and follow the directions in the comments.
 
 #toparrow-up, #movearrow-up {
   /* Set transform to rotate(90deg) */
-  transform: rotate(90deg);
 }
 
 #toparrow-right, #movearrow-right {
@@ -282,7 +283,8 @@ Copy the below code and follow the directions in the comments.
 }
 ```
 
-This code sets up some important formatting for the arrows. For example, we transform our arrows to point them in the correct direction.
+This code sets up some important formatting for the dance board and music board. For example, we transform our arrows to point them in the correct direction. Make sure your move arrows and top arrows are in the correct position. Don't worry if the move arrows appear higher up than they should be. This will be fixed when we style the last elements.
+
 The movearrows are going to be animated and will need keyframes. This brings us to the next step.
 
 Copy the below code and follow the directions in the comments. If you are stuck, follow the formatting [here](https://www.w3schools.com/cssref/css3_pr_animation-keyframes.php).
@@ -315,28 +317,30 @@ Style the play button
 #play {
   /* Set left and bottom margins to 300px */
   /* Set the display to inline block */
-  /* Style the font size, background color, border radius, color, etc.
+  /* Style the font size, background color, border radius, color, etc. */
 }
 ```
 
 Style the score text
 ```
 #score {
-  /* Set left margin to 900px */
+  /* Set left margin to 1000px */
   /* Set bottom margin to 300px */
   /* Set the display to inline block */
   /* Set height to 200px */
   /* Set width to 300px */
-  /* Style the font size, background color, border radius, color, etc.
+  /* Style the font size, background color, border radius, color, etc. */
 }
 ```
+
+Check and save your changes before moving on.
 
 ## Part 3: JS
 
 Now we are finally into the JavaScript section. Head to your script.js file and follow along.
 
-1. Set up variables
-- Create variable for chick 
+1. Set up variables, storing references for elements using DOM method ```document.getElementById(elementId)```.
+- Create variable for element chick 
 - Create variables for elements with ids arrow-up, arrow-left, arrow-right, arrow-down
 - Create variables for elements with ids movearrow-up, movearrow-left, movearrow-right, movearrow-down
 - Create variable for score text
