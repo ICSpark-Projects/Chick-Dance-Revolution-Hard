@@ -6,7 +6,7 @@ This chick can move up, down, left, and right, and must do so in time to the arr
 at different times.
 
 ## Difficulty
-Intermediate/Advanced
+Advanced
 
 ## Prerequisites
 - HTML structures and attributes
