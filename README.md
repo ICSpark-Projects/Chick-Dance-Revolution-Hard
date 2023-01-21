@@ -49,6 +49,12 @@ So we need to add an event listener.
 
 Remember, an event listener takes in two parameters, the type of event and a function. Pass in the parameter "event" (with no quotations) into the event listener function.
 
+Your code should look like this:
+```
+document.addEventListener('keydown', function(event) {
+});
+```
+
 Then, within the event listener function, write the following code.
 
 ```
@@ -77,6 +83,13 @@ reset to its default position, but this is not the case. As such, we need to add
 #### 2.2. Create an event listener to detect the 'keyup' event. 
 
 Format this event listener similar to the 'keydown' event listener.
+
+So it should look like this:
+```
+document.addEventListener('keyup', function(event) {
+});
+```
+
 Once again, create the variable named "key" and the if/else if statements corresponding to whether key equals "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown".
 
 Outside your if/else statements at the beginning of the 'keyup' event listener function, reset the source of the chick to the chick base image.
@@ -90,6 +103,12 @@ What comes next? Now that we can move our character, it is time to make the game
 ### 3. Function to play game
 
 #### 3.1. Create a function called "playGame()" to run the Chick Dance Revolution game.
+
+Your function should look like this:
+```
+function playGame() {
+}
+```
 
 Then, go back to your index.html and look for the play button. In this button's start tags, add the attribute ```onclick=playGame()```.
 This is another way to add an event listener besides just doing it in JavaScript. With this in place, if a user presses the
