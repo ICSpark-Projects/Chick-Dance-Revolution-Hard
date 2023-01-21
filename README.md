@@ -11,6 +11,7 @@ Advanced
 ## Prerequisites
 - JS Functions
 - JS Arrays
+- JS/HTML DOM
 - JS Events
 
 ## Make Note
