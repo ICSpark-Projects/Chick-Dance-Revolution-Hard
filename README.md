@@ -33,7 +33,7 @@ Head to your script.js file and follow along.
 "danceArrowRight", and "danceArrowDown"
 - Create variables for elements with ids movearrow-up, movearrow-left, movearrow-right, movearrow-down called "moveArrowUp", "moveArrowLeft",
 "moveArrowRight", and "moveArrowDown"
-- Create variable for element score text called "scoreText"
+- Create variable for element with id score-text called "scoreText"
 - Create integer variable for keeping track of player's score called "score". It should be set to 0.
 - Create empty array variable called "moves" for holding game moves
 - Create integer variable called "currentMove" with the value 0 to keep track of the current move in the "moves" array.
@@ -46,8 +46,7 @@ So we need to add an event listener.
 
 #### 2.1. Create an event listener on document (ex. document.addEventListener...) to detect the 'keydown' event.
 
-Remember, an event listener takes in two parameters, the type of event and a function. Pass in the parameter "event"
-into the event listener function.
+Remember, an event listener takes in two parameters, the type of event and a function. Pass in the parameter "event" (with no quotations) into the event listener function.
 
 Then, within the event listener function, write the following code.
 
@@ -64,7 +63,7 @@ and the arrows need to change accordingly as well.
 Set up if/else if statements to check whether the variable key is equal to "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown".
 
 Within those statements, make the following changes:
-- Change the source of the chick to the right direction
+- Change the source of the chick to the corresponding direction
   - Ex: chick.src = 'assets/chick-left.png';
 - Change the source of the appropriate dance board arrow and music board moving arrow to the orange arrow image.
   - Ex: danceArrowUp.src = 'assets/orange-arrow.png';
@@ -77,9 +76,9 @@ reset to its default position, but this is not the case. As such, we need to add
 #### 2.2. Create an event listener to detect the 'keyup' event. 
 
 Format this event listener similar to the 'keydown' event listener.
-Once again, create the key variable and the if/else if statements corresponding to whether key equals "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown".
+Once again, create the variable named "key" and the if/else if statements corresponding to whether key equals "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown".
 
-Outside your if/else statements, reset the source of the chick to the chick base image.
+Outside your if/else statements at the beginning of the 'keyup' event listener function, reset the source of the chick to the chick base image.
 
 Within your if/else if statements, reset the source of each appropriate arrow to the blue arrow image.
 
@@ -91,7 +90,7 @@ What comes next? Now that we can move our character, it is time to make the game
 
 #### 3.1. Create a function called "playGame()" to run the Chick Dance Revolution game.
 
-Then, go back to your index.html and look for the play button. In this button, add the attribute ```onclick=playGame()```.
+Then, go back to your index.html and look for the play button. In this button's start tags, add the attribute ```onclick=playGame()```.
 This is another way to add an event listener besides just doing it in JavaScript. With this in place, if a user presses the
 button, the playGame() function will execute.
 
@@ -115,7 +114,7 @@ what the current move is. To do so, we must use something called setInterval.
 
 #### 3.3. Creating set interval function
 
-setInterval is a function that enables us to call a function repeatedly after a set period of time, which will be useful for our game.
+setInterval is a method that enables us to call a function repeatedly after a set period of time, which will be useful for our game.
 
 Add the following code into your playGame() function:
 ```
@@ -130,7 +129,7 @@ This code will form the basis for what we need.
 
 Right after the clearInterval(intervalID) statement, create if/else if statements to check if moves[currentMove] == 0, moves[currentMove] == 1, moves[currentMove] == 2, or moves[currentMove] == 3. 
 
-Increment "currentMove" after all these if/else if statements because we want to keep iterating through the moves array after making a move.
+Increment "currentMove" after these if/else if statements because we want to keep iterating through the moves array after making a move.
 
 Then, at the end we must check whether to continue or end the game based on the value of currentMove.
 If currentMove < moves.length, call the playGame() function. Else if currentMove == moves.length, create a new audio using the "chicken-sound.mp3" in the assets folder and play the audio. Follow [here](https://stackoverflow.com/questions/9419263/how-to-play-audio) for reference. The audio signifies the end of the game.
@@ -138,7 +137,7 @@ If currentMove < moves.length, call the playGame() function. Else if currentMove
 #### 3.4. Implementing arrow up animation functionality
 
 Notice how we haven't put anything within the if/else if statements to check each of the moves made. This is where we need to set the
-arrow elements to have an animation. Add the following code within the first if statement that checks if moves[currentMove] == 0:
+arrow elements to have an animation, so they will move up the music board. Add the following code within the first if statement that checks if moves[currentMove] == 0:
 
 ```
 moveArrowUp.style.animation = 'moveUp 1s linear 1';
@@ -167,15 +166,15 @@ To do so, go back to your 'keydown' event listener code. Here, within the if sta
     }
 ```
 
-Paste the same code into each of your else if statements and adjust it appropriately.
+Paste the same code into each of your else if statements and adjust it appropriately for each different possible arrow pressed.
 
 You should see the score increase when you correctly hit the arrow.
 
 Congrats! You have successfully implemented Dance Chick Revolution! Make sure to save your work!
 
 ## Stretch Goals
-- Add a button to reset the game after it is complete.
-- Create a menu to adjust the speed of the moving arrows.
+- Add a button to reset the game after it is complete because right now, you have to refresh the page to replay the game.
+- Create a menu to adjust the speed of the moving arrows and improve the player's experience.
 - Add sound effects for each of the moving arrows when they correctly hit the top arrows.
 - Make the length of the game adjustable for the player
 - Decrease from the score when the player misses the top arrow
