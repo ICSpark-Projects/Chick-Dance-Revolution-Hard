@@ -214,7 +214,20 @@ h1 {
   /* Set the display to inline block */
   display: inline-block;
   /* Style the font size, background color, border radius, color, etc. */
-  background-color: orange;
+  font-size: 80px;
+  background-color: yellowgreen;
+  border-radius: 20px;
+  color: white;
+}
+
+#reset {
+  /* Set left margin to 10px */
+  margin-left: 10px;
+  /* Set bottom margin to 10px */
+  margin-bottom: 300px;
+  /* Set the display to inline block */
+  display: inline-block;
+  /* Style the font size, background color, border radius, color, etc. */
   font-size: 80px;
   background-color: red;
   border-radius: 20px;
@@ -222,8 +235,8 @@ h1 {
 }
 
 #score {
-  /* Set left margin to 1000px */
-  margin-left: 1000px;
+  /* Set left margin to 700px */
+  margin-left: 700px;
   /* Set bottom margin to 300px */
   margin-bottom: 300px;
   /* Set the display to inline block */
