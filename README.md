@@ -178,6 +178,7 @@ Congrats! You have successfully implemented Dance Chick Revolution! Make sure to
 - Add sound effects for each of the moving arrows when they correctly hit the top arrows.
 - Make the length of the game adjustable for the player
 - Decrease from the score when the player misses the top arrow
+- Add background music to the game when it plays
 
 
 
