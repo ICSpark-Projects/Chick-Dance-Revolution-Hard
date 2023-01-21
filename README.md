@@ -18,16 +18,16 @@ For this project, save your work frequently, and to see your changes reflected i
 
 ## Setting Up
 
-- Download the directory zip file (click green "Code" button, then click "download ZIP").
+- Download the directory zip file (click green "Code" button, then click "Download ZIP").
 - Open the zip and upload the index.html file, style.css file, and assets folder into the directory you are working.
-- Create the js file called script.js
+- Create the JS file called script.js
 
 ## JavaScript
 
-For this project, the HTML and CSS files have been provided for you so you can focus on the JavaScript.
+For this project, the HTML and CSS files have been provided for you, so you can focus on the JavaScript.
 Head to your script.js file and follow along.
 
-### 1. Set up variables, storing references for elements using DOM method ```document.getElementById(elementId)```.
+### 1. Set up variables, storing references for elements using the DOM method ```document.getElementById(elementId)```.
 - Create variable for element chick called "chick"
 - Create variables for elements with ids dancearrow-up, dancearrow-left, dancearrow-right, dancearrow-down called "danceArrowUp", "danceArrowLeft",
 "danceArrowRight", and "danceArrowDown"
@@ -44,7 +44,7 @@ An essential part of Chick Dance Revolution is the chicken moving up, down, left
 we need to be able to detect what keys the player is pressing. In particular, the controls are the arrow keys.
 So we need to add an event listener.
 
-#### 2.1. Create an event listener on document to detect the 'keydown' event.
+#### 2.1. Create an event listener on document (ex. document.addEventListener...) to detect the 'keydown' event.
 
 Remember, an event listener takes in two parameters, the type of event and a function. Pass in the parameter "event"
 into the event listener function.
