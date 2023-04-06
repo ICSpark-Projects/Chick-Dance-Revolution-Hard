@@ -193,9 +193,8 @@ You should see the score increase when you correctly hit the arrow.
 Congrats! You have successfully implemented Dance Chick Revolution! Make sure to save your work!
 
 ## Stretch Goals
-- Add a button to reset the game after it is complete because right now, you have to refresh the page to replay the game.
+- Add sound effects for each of the moving arrows when they correctly hit the top arrows. Look at the assets folder for sounds you can add.
 - Create a menu to adjust the speed of the moving arrows and improve the player's experience.
-- Add sound effects for each of the moving arrows when they correctly hit the top arrows.
 - Make the length of the game adjustable for the player
 - Decrease from the score when the player misses the top arrow
 - Add background music to the game when it plays
